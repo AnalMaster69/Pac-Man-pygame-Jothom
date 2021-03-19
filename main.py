@@ -3,7 +3,7 @@ import pygame
 import sys
 import os
 import random
-import world
+import world as wo
 import player
 import enemy
 
@@ -34,11 +34,17 @@ START_TIME = pygame.time.get_ticks()
 
 
 # Creation ---------------------------------------------------------#
-world = World(SCREEN)
+world = wo.World(SCREEN, BLOCK_SIZE)
+
 
 # Functions ------------------------------------------------------- #
 def redraw():
     SCREEN.fill((22,22,22))
+
+
+    world.do()
+
+
     fps_label = main_font.render(f"FPS: {int(mainClock.get_fps())}", 1, (255,200,20))
     SCREEN.blit(fps_label, (5,5))
 
@@ -67,7 +73,7 @@ while True:
      # keys_pressed = pygame.key.get_pressed()
      # if keys_pressed[pygame.K_LEFT]:
 
-    time = (pygame.time.get_ticks() - START_TIME)/1000
+
 
     # draw --------------------------------------------- #
     redraw()
