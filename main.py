@@ -5,7 +5,7 @@ import os
 import random
 import world
 import player
-
+import enemy
 
 
 
@@ -13,8 +13,9 @@ import player
 os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (100,32) # windows position
 pygame.init()
 pygame.display.set_caption('Pac man')
-SCREEN_WIDTH = 1200
-SCREEN_HEIGHT = 680
+BLOCK_SIZE = 20
+SCREEN_WIDTH = 31 * BLOCK_SIZE
+SCREEN_HEIGHT = 28 * BLOCK_SIZE
 SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT),0,32)
 
 mainClock = pygame.time.Clock()
@@ -33,7 +34,7 @@ START_TIME = pygame.time.get_ticks()
 
 
 # Creation ---------------------------------------------------------#
-
+world = World(SCREEN)
 
 # Functions ------------------------------------------------------- #
 def redraw():
