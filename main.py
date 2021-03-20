@@ -4,7 +4,7 @@ import sys
 import os
 import random
 import world as wo
-import player
+import player as pl
 import enemy
 
 
@@ -35,7 +35,7 @@ START_TIME = pygame.time.get_ticks()
 
 # Creation ---------------------------------------------------------#
 world = wo.World(SCREEN, BLOCK_SIZE)
-
+player = pl.Player(SCREEN, BLOCK_SIZE)
 
 # Functions ------------------------------------------------------- #
 def redraw():
@@ -43,6 +43,7 @@ def redraw():
 
 
     world.do()
+    player.do()
 
 
     fps_label = main_font.render(f"FPS: {int(mainClock.get_fps())}", 1, (255,200,20))
