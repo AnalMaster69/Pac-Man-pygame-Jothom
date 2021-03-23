@@ -10,7 +10,7 @@ class World:
         self.SCREEN = SCREEN
         self.BLOCK_SIZE = BLOCK_SIZE
 
-        self.current_level = 1
+        self.current_level = 2
 
 
     def draw(self):
