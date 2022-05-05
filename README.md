@@ -1,12 +1,8 @@
 # Pac-Man pygame Jothom
 Pac-Man replica with pygame
 
-(il est très beau)
+## How to run the game
 
-To launch the game : just run `main.py`
-
-if the instruction above doesn't work do this :
-1. open terminal on folder 
-2. write on terminal : `python3 main.py`
-3. shoud work just fine
-
+1. Install [Python3](https://www.python.org/downloads/)
+2. Open a terminal and type : `pip install pygame`
+3.  `cd` in the folder and run : `python3 main.py`
